@@ -42,3 +42,16 @@ const makeArray = (...args: number[]) => { // rest when not in function call (no
     return args;
 }
 console.log(makeArray(2, 3, 4)); // returns an array ->[2,3,4]
+
+//Destructuring
+// arrays
+const hobbies: string[] = ["sleeping", "dreaming"];
+const [hb1, hb2] = hobbies;
+
+console.log(hb1, hb2);
+    
+//objects
+const userInfo: {firstName: string, ageNum: number} = {firstName: "Sam", ageNum: 35};
+// const {firstName, ageNum} = userInfo; // without alias, should be same name as object keys
+const {firstName: n, ageNum: a} = userInfo; // with alias 
+console.log(n, a);

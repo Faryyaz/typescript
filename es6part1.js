@@ -29,11 +29,20 @@ console.log(counter); // return 0
 // REST & SPREAD
 var numbers = [10, 20, 7, 5];
 console.log(Math.max.apply(Math, numbers)); // spread when in function call (notice ...)
-function makeArray() {
+var makeArray = function () {
     var args = [];
     for (var _i = 0; _i < arguments.length; _i++) {
         args[_i] = arguments[_i];
     }
     return args;
-}
-console.log(makeArray(2, 3, 4)); // return [2,3,4]
+};
+console.log(makeArray(2, 3, 4)); // returns an array ->[2,3,4]
+//Destructuring
+// arrays
+var hobbies = ["sleeping", "dreaming"];
+var hb1 = hobbies[0], hb2 = hobbies[1];
+console.log(hb1, hb2);
+//objects
+var userInfo = { name: "Sam", age: 35 };
+var name = userInfo.name, age = userInfo.age;
+console.log(name, age);
