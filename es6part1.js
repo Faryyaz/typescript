@@ -43,6 +43,11 @@ var hobbies = ["sleeping", "dreaming"];
 var hb1 = hobbies[0], hb2 = hobbies[1];
 console.log(hb1, hb2);
 //objects
-var userInfo = { name: "Sam", age: 35 };
-var name = userInfo.name, age = userInfo.age;
-console.log(name, age);
+var userInfo = { firstName: "Sam", ageNum: 35 };
+// const {firstName, ageNum} = userInfo; // without alias, should be same name as object keys
+var n = userInfo.firstName, a = userInfo.ageNum; // with alias 
+console.log(n, a);
+// template literals
+var uName = "Max";
+var msg = "This is a heading\n                My name is " + uName + ".\n                Hello and welcome!\n";
+console.log(msg);

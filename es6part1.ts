@@ -55,3 +55,12 @@ const userInfo: {firstName: string, ageNum: number} = {firstName: "Sam", ageNum:
 // const {firstName, ageNum} = userInfo; // without alias, should be same name as object keys
 const {firstName: n, ageNum: a} = userInfo; // with alias 
 console.log(n, a);
+
+// template literals
+const uName: string = "Max";
+const msg: string = `This is a heading
+                My name is ${uName}.
+                Hello and welcome!
+`;
+
+console.log(msg);
