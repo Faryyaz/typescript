@@ -73,5 +73,5 @@ var plant = new Plant();
 console.log(plant.species); // return Default
 plant.species = "AB"; // too short
 console.log(plant.species); // return Default
-plant.species = "GREEN"; // too short
+plant.species = "GREEN"; // its good
 console.log(plant.species); // return GREEN
