@@ -75,3 +75,15 @@ plant.species = "AB"; // too short
 console.log(plant.species); // return Default
 plant.species = "GREEN"; // its good
 console.log(plant.species); // return GREEN
+// static properties & method
+var Helpers = /** @class */ (function () {
+    function Helpers() {
+    }
+    Helpers.calcCircumference = function (diameter) {
+        return this.PI * diameter;
+    };
+    Helpers.PI = 3.14;
+    return Helpers;
+}());
+console.log(2 * Helpers.PI); //6.28
+console.log(Helpers.calcCircumference(7)); //21.98
