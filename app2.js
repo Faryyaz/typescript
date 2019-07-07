@@ -87,3 +87,28 @@ var Helpers = /** @class */ (function () {
 }());
 console.log(2 * Helpers.PI); //6.28
 console.log(Helpers.calcCircumference(7)); //21.98
+//Abstract class
+var Project = /** @class */ (function () {
+    function Project() {
+        this.projectName = "Default";
+        this.budget = 1000;
+    }
+    Project.prototype.calcBudget = function () {
+        return this.budget * 2;
+    };
+    return Project;
+}());
+var ITproject = /** @class */ (function (_super) {
+    __extends(ITproject, _super);
+    function ITproject() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ITproject.prototype.changeName = function (name) {
+        this.projectName = name;
+    };
+    return ITproject;
+}(Project));
+var project = new ITproject();
+console.log(project);
+project.changeName("Typescript");
+console.log(project);

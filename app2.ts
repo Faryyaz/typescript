@@ -78,3 +78,28 @@ class Helpers {
 
 console.log(2 * Helpers.PI); //6.28
 console.log(Helpers.calcCircumference(7)); //21.98
+
+//Abstract class
+abstract class Project {
+    public projectName: string = "Default";
+    public budget: number = 1000;
+
+    abstract changeName(name: string): void;
+
+    public calcBudget(): number {
+        return this.budget * 2;
+    }
+
+}
+
+class ITproject extends Project {
+
+    public changeName(name: string): void {
+        this.projectName = name;
+    }
+}
+
+let project = new ITproject();
+console.log(project);
+project.changeName("Typescript");
+console.log(project);
