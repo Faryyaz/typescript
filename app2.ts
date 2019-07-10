@@ -1,5 +1,5 @@
 // creating a class
-class Person {
+class People {
     public name: string;
     private type: string | null = null;
     protected age:  number;
@@ -22,15 +22,15 @@ class Person {
 
 }
 
-const person = new Person("Max", "max");
-console.log(person);
-console.log(person.name, person.username);
-person.printAge();
-person.setType("male");
+const people = new People("Max", "max");
+console.log(people);
+console.log(people.name, people.username);
+people.printAge();
+people.setType("male");
 
 
 // Inheritance
-class Teacher extends Person {
+class Teacher extends People {
     public height = "1m78";
 
     constructor(username: string, public hobby: string) {
@@ -103,3 +103,23 @@ let project = new ITproject();
 console.log(project);
 project.changeName("Typescript");
 console.log(project);
+
+
+// private constructor singleton patern
+class Single {
+    private static instance: Single | null = null;
+
+    private constructor(public readonly name: string){}
+
+    public static getInstance(): Single {
+        if(!this.instance) {
+            this.instance = new Single("Welcome to Singleton");
+        }
+        return this.instance;
+    }
+}
+
+let single = Single.getInstance();
+console.log(single);
+console.log(single.name); // return Welcome to Singleton
+// single.name = "test"; //cant change name because it is readonly refer to constructor

@@ -31,8 +31,8 @@ var test;
 console.log(test.hey); // hello
 console.log(test.phrase); // world
 // any
-var car = "BMW";
-car = { brand: "BMW", color: "White" };
+var vehicle = "BMW";
+vehicle = { brand: "BMW", color: "White" };
 //function
 function printName() {
     return fName;

@@ -13,29 +13,29 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 // creating a class
-var Person = /** @class */ (function () {
+var People = /** @class */ (function () {
     // notice username here refers to creating a property username: string in the class above and
     // assigning it in the constructor like this.username = username; it is a shorthand form
-    function Person(name, username) {
+    function People(name, username) {
         this.username = username;
         this.type = null;
         this.age = 31;
         this.name = name;
     }
-    Person.prototype.printAge = function () {
+    People.prototype.printAge = function () {
         console.log(this.age);
     };
-    Person.prototype.setType = function (type) {
+    People.prototype.setType = function (type) {
         this.type = type;
         console.log(this.type);
     };
-    return Person;
+    return People;
 }());
-var person = new Person("Max", "max");
-console.log(person);
-console.log(person.name, person.username);
-person.printAge();
-person.setType("male");
+var people = new People("Max", "max");
+console.log(people);
+console.log(people.name, people.username);
+people.printAge();
+people.setType("male");
 // Inheritance
 var Teacher = /** @class */ (function (_super) {
     __extends(Teacher, _super);
@@ -47,7 +47,7 @@ var Teacher = /** @class */ (function (_super) {
         return _this;
     }
     return Teacher;
-}(Person));
+}(People));
 var teacher = new Teacher("wello", "football");
 console.log(teacher);
 // Setters and Getters
@@ -112,3 +112,21 @@ var project = new ITproject();
 console.log(project);
 project.changeName("Typescript");
 console.log(project);
+// private constructor singleton patern
+var Single = /** @class */ (function () {
+    function Single(name) {
+        this.name = name;
+    }
+    Single.getInstance = function () {
+        if (!this.instance) {
+            this.instance = new Single("Welcome to Singleton");
+        }
+        return this.instance;
+    };
+    Single.instance = null;
+    return Single;
+}());
+var single = Single.getInstance();
+console.log(single);
+console.log(single.name); // return Welcome to Singleton
+// single.name = "test"; //cant change name because it is readonly refer to constructor

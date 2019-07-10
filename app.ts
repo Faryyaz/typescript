@@ -40,8 +40,8 @@ console.log(test.phrase); // world
 
 
 // any
-let car: any = "BMW";
-car = {brand: "BMW", color: "White"};
+let vehicle: any = "BMW";
+vehicle = {brand: "BMW", color: "White"};
 
 
 //function
