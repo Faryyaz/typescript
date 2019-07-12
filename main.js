@@ -23,3 +23,13 @@ var individual = {
 interface_1.sayGreetings(individual);
 interface_1.changeName(individual);
 interface_1.sayGreetings(individual);
+var newPersonality = {
+    name: "Lady",
+    // we dont define age because it is optional
+    test: 10,
+    improvePersonality: function (firstName) {
+        console.log("Hi I am improved and my name is " + firstName);
+    }
+};
+interface_1.testPersonality(newPersonality);
+newPersonality.improvePersonality("Bart");

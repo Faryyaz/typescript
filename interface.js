@@ -8,3 +8,7 @@ function changeName(individual) {
     individual.name = "Tommy";
 }
 exports.changeName = changeName;
+function testPersonality(personality) {
+    console.log(personality.name);
+}
+exports.testPersonality = testPersonality;
