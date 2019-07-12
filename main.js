@@ -12,6 +12,14 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var square_1 = __importDefault(require("./math/square"));
 var Triangle = __importStar(require("./math/triangle"));
+var interface_1 = require("./interface");
 console.log(square_1.default(10, 20));
 console.log(Triangle.factor);
 console.log(Triangle.calcTriangle(4));
+var individual = {
+    name: "Jenny",
+    age: 29
+};
+interface_1.sayGreetings(individual);
+interface_1.changeName(individual);
+interface_1.sayGreetings(individual);
