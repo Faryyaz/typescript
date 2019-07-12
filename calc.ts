@@ -1,6 +1,6 @@
-import { calcArea } from './math/square';
-import { factor, calcTriangle } from './math/triangle';
+import calc from './math/square';
+import * as Triangle from './math/triangle';
 
-console.log(calcArea(10, 20));
-console.log(factor);
-console.log(calcTriangle(4));
+console.log(calc(10, 20));
+console.log(Triangle.factor);
+console.log(Triangle.calcTriangle(4));
