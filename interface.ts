@@ -29,3 +29,12 @@ interface Personality {
 export function testPersonality(personality: Personality) {
     console.log(personality.name);
 }
+
+// class implementating an interface
+export class Animal implements Personality {
+    name: string = "Ponpon";
+
+    improvePersonality(firstName: string): void {
+        console.log("Hello am a dog! and my name is " + this.name + firstName);
+    }
+}

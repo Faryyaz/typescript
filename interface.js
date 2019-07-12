@@ -12,3 +12,14 @@ function testPersonality(personality) {
     console.log(personality.name);
 }
 exports.testPersonality = testPersonality;
+// class implementating an interface
+var Animal = /** @class */ (function () {
+    function Animal() {
+        this.name = "Ponpon";
+    }
+    Animal.prototype.improvePersonality = function (firstName) {
+        console.log("Hello am a dog! and my name is " + this.name + firstName);
+    };
+    return Animal;
+}());
+exports.Animal = Animal;

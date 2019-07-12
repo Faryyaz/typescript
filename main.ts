@@ -1,6 +1,6 @@
 import calc from './math/square';
 import * as Triangle from './math/triangle';
-import { sayGreetings, changeName, testPersonality } from './interface';
+import { sayGreetings, changeName, testPersonality, Animal } from './interface';
 
 console.log(calc(10, 20));
 console.log(Triangle.factor);
@@ -30,3 +30,6 @@ let newPersonality = {
 
 testPersonality(newPersonality);
 newPersonality.improvePersonality("Bart");
+
+let animal = new Animal();
+animal.improvePersonality(" Noire");
