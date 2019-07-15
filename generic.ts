@@ -26,3 +26,12 @@ const testResult: Array<number> = [2, 1.99];
 testResult.push(29);
 // testResult.push("stasd"); // ide is complaining, cant push string to type number right?
 console.log(testResult);
+
+// generic type arrays
+function printAll<T>(args: T[]) {
+    args.forEach(
+        (element) => console.log(element)
+    );
+}
+
+printAll<string>(["Test", "Glksd"]);

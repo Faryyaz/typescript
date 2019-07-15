@@ -21,3 +21,8 @@ var testResult = [2, 1.99];
 testResult.push(29);
 // testResult.push("stasd"); // ide is complaining, cant push string to type number right?
 console.log(testResult);
+// generic type arrays
+function printAll(args) {
+    args.forEach(function (element) { return console.log(element); });
+}
+printAll(["Test", "Glksd"]);
