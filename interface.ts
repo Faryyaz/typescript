@@ -38,3 +38,20 @@ export class Animal implements Personality {
         console.log("Hello am a dog! and my name is " + this.name + firstName);
     }
 }
+
+
+// function types - interface for functions
+interface doSum {
+    (num1: number, num2: number): number;
+}
+
+export let myCalcSum: doSum;
+myCalcSum = function(val1, val2) {
+    return val1 + val2;
+}
+
+// interface inheritance
+
+interface AnotherPersonality extends Personality {
+    age: number; // overwrite , its no longer optional
+}

@@ -23,3 +23,6 @@ var Animal = /** @class */ (function () {
     return Animal;
 }());
 exports.Animal = Animal;
+exports.myCalcSum = function (val1, val2) {
+    return val1 + val2;
+};

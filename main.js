@@ -35,3 +35,4 @@ interface_1.testPersonality(newPersonality);
 newPersonality.improvePersonality("Bart");
 var animal = new interface_1.Animal();
 animal.improvePersonality(" Noire");
+console.log("My sum: " + interface_1.myCalcSum(10, 20)); // 30

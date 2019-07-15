@@ -1,6 +1,6 @@
 import calc from './math/square';
 import * as Triangle from './math/triangle';
-import { sayGreetings, changeName, testPersonality, Animal } from './interface';
+import { sayGreetings, changeName, testPersonality, Animal, myCalcSum } from './interface';
 
 console.log(calc(10, 20));
 console.log(Triangle.factor);
@@ -33,3 +33,7 @@ newPersonality.improvePersonality("Bart");
 
 let animal = new Animal();
 animal.improvePersonality(" Noire");
+
+
+
+console.log("My sum: " + myCalcSum(10,20)); // 30
