@@ -26,3 +26,32 @@ function printAll(args) {
     args.forEach(function (element) { return console.log(element); });
 }
 printAll(["Test", "Glksd"]);
+// Generic types use
+var echo2 = betterEcho;
+console.log(echo2("something"));
+// Generic Class
+var SimpleMath = /** @class */ (function () {
+    function SimpleMath() {
+    }
+    SimpleMath.prototype.calcul = function () {
+        return this.value1 * this.value2;
+    };
+    return SimpleMath;
+}());
+var simpleMath = new SimpleMath();
+simpleMath.value1 = 10;
+simpleMath.value2 = 2;
+console.log(simpleMath.calcul());
+// using multiple types
+var SimpleCalculation = /** @class */ (function () {
+    function SimpleCalculation() {
+    }
+    SimpleCalculation.prototype.init = function () {
+        return this.num1 * this.num2;
+    };
+    return SimpleCalculation;
+}());
+var simpleCalculation = new SimpleCalculation();
+simpleCalculation.num1 = 4;
+simpleCalculation.num2 = "7";
+console.log("My simple: " + simpleCalculation.init());

@@ -35,3 +35,40 @@ function printAll<T>(args: T[]) {
 }
 
 printAll<string>(["Test", "Glksd"]);
+
+// Generic types use
+const echo2: <T>(data: T) => T = betterEcho;
+
+console.log(echo2<string>("something"));
+
+
+// Generic Class
+
+class SimpleMath<T extends number> {
+    value1: T;
+    value2: T;
+
+    calcul() {
+        return this.value1 * this.value2;
+    }
+}
+
+const simpleMath = new SimpleMath<number>();
+simpleMath.value1 = 10;
+simpleMath.value2 = 2;
+console.log(simpleMath.calcul());
+
+// using multiple types
+class SimpleCalculation<T extends U, U extends number | string> {
+    num1: T;
+    num2: U;
+
+    init() {
+        return +this.num1 * +this.num2;
+    }
+}
+
+const simpleCalculation = new SimpleCalculation();
+simpleCalculation.num1 = 4;
+simpleCalculation.num2 = "7";
+console.log("My simple: " + simpleCalculation.init());
