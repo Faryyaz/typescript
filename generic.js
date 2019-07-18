@@ -47,7 +47,7 @@ var SimpleCalculation = /** @class */ (function () {
     function SimpleCalculation() {
     }
     SimpleCalculation.prototype.init = function () {
-        return this.num1 * this.num2;
+        return +this.num1 * +this.num2;
     };
     return SimpleCalculation;
 }());
@@ -55,3 +55,40 @@ var simpleCalculation = new SimpleCalculation();
 simpleCalculation.num1 = 4;
 simpleCalculation.num2 = "7";
 console.log("My simple: " + simpleCalculation.init());
+//exercise on generic
+var MyMap = /** @class */ (function () {
+    function MyMap() {
+        this.map = {};
+    }
+    MyMap.prototype.setItem = function (key, item) {
+        this.map[key] = item;
+    };
+    MyMap.prototype.getItem = function (key) {
+        return this.map[key];
+    };
+    MyMap.prototype.clear = function () {
+        this.map = {};
+    };
+    MyMap.prototype.printAll = function () {
+        for (var key in this.map) {
+            console.log(key, this.map[key]);
+        }
+    };
+    return MyMap;
+}());
+// number
+var myMap = new MyMap();
+myMap.setItem("Apples", 7);
+myMap.setItem("Orange", 5);
+console.log(myMap.getItem("Orange")); //5
+myMap.printAll();
+myMap.clear();
+myMap.printAll(); // null
+// string
+var myMap2 = new MyMap();
+myMap2.setItem("Apples", "7");
+myMap2.setItem("Orange", "5");
+console.log(myMap2.getItem("Orange")); //5
+myMap2.printAll();
+myMap2.clear();
+myMap2.printAll(); // null

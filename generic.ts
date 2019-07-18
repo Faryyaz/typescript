@@ -59,7 +59,7 @@ simpleMath.value2 = 2;
 console.log(simpleMath.calcul());
 
 // using multiple types
-class SimpleCalculation<T extends U, U extends number | string> {
+class SimpleCalculation<T extends number | string, U extends number | string> {
     num1: T;
     num2: U;
 
@@ -68,7 +68,49 @@ class SimpleCalculation<T extends U, U extends number | string> {
     }
 }
 
-const simpleCalculation = new SimpleCalculation();
+const simpleCalculation = new SimpleCalculation<number, string>();
 simpleCalculation.num1 = 4;
 simpleCalculation.num2 = "7";
 console.log("My simple: " + simpleCalculation.init());
+
+//exercise on generic
+class MyMap<T> {
+    private map: {[key: string]: T} = {};
+
+    setItem(key: string, item: T) {
+        this.map[key] = item;
+    }
+
+    getItem(key: string) {
+        return this.map[key];
+    }
+
+    clear() {
+        this.map = {};
+    }
+
+    printAll() {
+        for(let key in this.map) {
+            console.log(key, this.map[key]);
+        }
+    }
+
+}
+
+// number
+const myMap = new MyMap<number>();
+myMap.setItem("Apples", 7);
+myMap.setItem("Orange", 5);
+console.log(myMap.getItem("Orange")); //5
+myMap.printAll();
+myMap.clear();
+myMap.printAll(); // null
+
+// string
+const myMap2 = new MyMap<string>();
+myMap2.setItem("Apples", "7");
+myMap2.setItem("Orange", "5");
+console.log(myMap2.getItem("Orange")); //5
+myMap2.printAll();
+myMap2.clear();
+myMap2.printAll(); // null
