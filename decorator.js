@@ -104,3 +104,4 @@ renovation.calcBudget = function () {
 renovation.calcBudget();
 console.log(renovation);
 renovation.printBudget("any", true);
+renovation.printBudget("any", false);

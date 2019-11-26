@@ -94,3 +94,4 @@ renovation.calcBudget = function() { // if editable true, we can overwrite the f
 renovation.calcBudget();
 console.log(renovation);
 renovation.printBudget("any", true);
+renovation.printBudget("any", false);
